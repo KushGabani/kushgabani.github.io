@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Kush Gabani</title>
-        <link rel = "icon" type = "image/icon type" href = "assets/title-icon.png" />
+        <link rel = "icon" href = "assets/title-icon.png" type = "image/icon type" />
         <link rel="stylesheet" href="portfolio.css" />
         <!-- Bootstrap css -->
         <link
@@ -15,7 +15,7 @@
         />
         <!-- GOOGLE ROBOTO & DM SERIF FONT -->
         <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&family=Poppins&family=Playfair+Display&family=Roboto&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&family=Poppins:wght@400;500;700;800&family=Playfair+Display&family=Roboto&display=swap"
             rel="stylesheet"
         />
     </head>
@@ -56,6 +56,9 @@
                     <a href = "mailto:kushgabz2687@gmail.com" target="_blank">
                         <img src="assets/mail 1.svg" width="20" class = "icons">
                     </a>
+                    <a href = "https://github.com/KushGabani" target="_blank">
+                        <img src="assets/Github.svg" width="20" class = "icons" />
+                    </a>
                     <a href = "https://twitter.com/kaaaafifilmy" target = "_blank">
                         <img src="assets/Twitter.svg" target="_blank" width="20" class = "icons" />
                     </a>
@@ -68,9 +71,61 @@
                     <a href = "https://www.instagram.com/kush.gab/" target="_blank">
                         <img src="assets/Instagram.svg" width="25" class = "icons" />
                     </a>
-                    <a href = "https://dirbbble.com/kushgabz" target="_blank">
-                        <img src="assets/Dribbble.svg" width="20" class = "icons" />
-                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class = "second-screen">
+            <div class="heading">
+                <span class = "second-title">
+                    PROJECTS
+                </span>
+                <p class = "description">Logically minded and design centric</p>
+            </div>
+
+            <div class = "work-area">
+                <div class="card" id = "first-card">
+                    <span class = "disp-letter align-center">W</span>
+                </div>
+
+                <div class = "card" id="second-card">
+                    <span class = "disp-letter align-center">o</span>
+                </div>
+
+                <div class = "card" id="third-card">
+                    <span class = "disp-letter align-center">r</span>
+                </div>
+
+                <div class = "card" id = "fourth-card">
+                    <span class = "disp-letter align-center">k</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="third-screen">
+            <div id="curve" class="contact-card">
+                <div class="footer">
+                    <div class="connections">
+                        <a href = "mailto:kushgabz2687@gmail.com" target = "_blank"><div class="connection mail"><div class="icon"></div></div></a>
+                        <a href = "https://github.com/KushGabani" target = "_blank"><div class="connection github"><div class="icon"></div></div></a>
+                        <a href = "https://twitter.com/kaaaafifilmy" target = "_blank"></a><div class="connection twitter"><div class="icon"></div></div></a>
+                    </div>
+                    <svg id="curve">
+                        <path id="p" d="M0,200 Q80,100 400,200 V150 H0 V50" transform="translate(0 300)" />
+                        <rect id="dummyRect" x="0" y="0" height="450" width="400"
+                    fill="transparent" />
+                        <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,100 400,50 V150 H0 V50" fill="freeze" begin="dummyRect.mouseover" end="dummyRect.mouseout" dur="0.1s" id="bounce1" />
+                        <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,0 400,50 V150 H0 V50" fill="freeze" begin="bounce1.end" end="dummyRect.mouseout" dur="0.15s" id="bounce2" />
+                        <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,80 400,50 V150 H0 V50" fill="freeze" begin="bounce2.end" end="dummyRect.mouseout" dur="0.15s" id="bounce3" />
+                        <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,45 400,50 V150 H0 V50" fill="freeze" begin="bounce3.end" end="dummyRect.mouseout" dur="0.1s" id="bounce4" />
+                        <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,50 400,50 V150 H0 V50" fill="freeze" begin="bounce4.end" end="dummyRect.mouseout" dur="0.05s" id="bounce5" />
+                        <animate xlink:href="#p" attributeName="d" to="M0,200 Q80,100 400,200 V150 H0 V50" fill="freeze" begin="dummyRect.mouseout" dur="0.15s" id="bounceOut" />
+                    </svg>
+                    <div class="info">
+                        <div class="name">Kush Gabani</div>
+                        <div class="job">CS Student</div>
+                    </div>
                 </div>
             </div>
         </div>
