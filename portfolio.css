@@ -10,112 +10,82 @@ body {
 }
 
 .first-screen {
-    height: 100vh;
     position: relative;
 }
 
 .top-menu {
-    padding-left: 3rem;
-    padding-right: 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.main-container {
-    display: flex;
-    margin: 3rem 7rem;
-}
-
-.container {
-    width: fit-content;
-    padding-top: 6rem;
-    padding-left: 1rem;
-}
-
 .illustration {
-    width: 18rem;
-}
-
-.illustration-container {
-    margin: 0 7rem;
+    width: 60%;
 }
 
 .greeting {
     width: fit-content;
     padding-left: 0.5rem;
+    margin-bottom: 0;
     font-family: Montserrat;
     font-weight: normal;
     font-size: 20px;
     font-style: normal;
-    color: #292929
+    color: #292929;
 }
 
 .display {
     font-family: Montserrat;
     font-style: normal;
-    font-weight:700;
+    font-weight: 700;
     font-size: 90px;
     line-height: 90px;
 }
 
 .scroll-line {
     position: absolute;
-    margin-top: -1rem;
-    margin-left: 2.5rem;
-    background-color: #FF5959;
-	height: 4px;
-	overflow: hidden;
-    width:200px;
-    transform: rotate(90deg);
+    background-color: #ff5959;
+    height: 200px;
+    overflow: hidden;
+    width: 4px;
 }
 
 .scroll-line::before,
 .scroll-line::after {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	content: ""
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
 }
 
 .scroll-line:before {
-	background: #E0E0E0;
+    background: #e0e0e0;
 }
 
 .scroll-line::after {
-	background: #FF5959;
-	animation: slider 3s infinite
+    background: #ff5959;
+    animation: slider 2.5s ease-out infinite;
 }
 
 .icons {
     margin: 0 0.5rem;
+    text-decoration: none;
 }
 
 @keyframes slider {
-	0% {
-		transform: translate3d(-200%, 0, 0)
-	}
-	60% {
-		transform: translate3d(100%, 0, 0)
-	}
-	100% {
-		transform: translate3d(100%, 0, 0)
-	}
+    0% {
+        transform: translate3d(0, -200%, 0);
+    }
+    100% {
+        transform: translate3d(0, 100%, 0);
+    }
 }
-
-
 
 .second-screen {
-    height: 100vh;
+    /* height: 100vh; */
     position: relative;
-}
-
-.heading {
-    margin: 0 10rem;
-    padding-top: 2.5rem;
-    padding-bottom: 1rem;
 }
 
 .second-title {
@@ -124,11 +94,10 @@ body {
     font-weight: bold;
     font-size: 24px;
     letter-spacing: 0.1em;
-    color: #FF5151;
+    color: #ff5151;
 }
 
 .description {
-    margin-top: -0.5rem;
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
@@ -145,25 +114,24 @@ body {
 
 .card {
     width: 25%;
-    height: 100%;
 }
 
 #first-card {
-    background-color: #FF5555;
+    background-color: #ff5555;
 }
 
 #second-card {
-    background-color: #FF7373;
+    background-color: #ff7373;
     padding-top: 3rem;
 }
 
 #third-card {
-    background-color: #FF9F9F;
+    background-color: #ff9f9f;
     padding-top: 9rem;
 }
 
 #fourth-card {
-    background-color: #FFD1D1;
+    background-color: #ffd1d1;
     padding-top: 15rem;
 }
 
@@ -173,10 +141,9 @@ body {
     font-weight: 900;
     font-size: 200px;
     letter-spacing: 0.1em;
-    color: #FFFFFF;
+    color: #ffffff;
     text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.14);
 }
-
 
 .third-screen {
     height: 100vh;
@@ -224,7 +191,7 @@ body {
 
 svg#curve {
     position: absolute;
-    fill: #FF7373;
+    fill: #ff7373;
     left: 0;
     bottom: 0;
     width: 400px;
@@ -250,8 +217,8 @@ svg#curve {
     padding: 5px;
     margin-right: 25px;
     transform: translateY(200px);
-    
-    transition: transform 1s cubic-bezier(.46, 1.48, .18, .81);
+
+    transition: transform 1s cubic-bezier(0.46, 1.48, 0.18, 0.81);
 }
 
 .contact-card:hover .connection {
@@ -302,7 +269,7 @@ svg#curve {
     padding-left: 20px;
     transform: translateY(250px);
 
-    transition: transform 1s cubic-bezier(.31,1.21,.64,1.02);
+    transition: transform 1s cubic-bezier(0.31, 1.21, 0.64, 1.02);
 }
 
 .contact-card:hover .info {
@@ -316,4 +283,20 @@ svg#curve {
 
 .job {
     margin-top: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .illustration {
+        display: none;
+    }
+
+    .display {
+        font-size: 70px;
+        line-height: 70px;
+    }
+
+    .greeting {
+        font-size: 14px;
+        word-wrap: none;
+    }
 }
