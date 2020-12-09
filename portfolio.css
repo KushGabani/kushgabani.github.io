@@ -38,8 +38,8 @@ body {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 700;
-    font-size: 90px;
-    line-height: 90px;
+    font-size: 100px;
+    line-height: 100px;
 }
 
 .scroll-line {
@@ -84,7 +84,6 @@ body {
 }
 
 .second-screen {
-    /* height: 100vh; */
     position: relative;
 }
 
@@ -298,5 +297,19 @@ svg#curve {
     .greeting {
         font-size: 14px;
         word-wrap: none;
+    }
+
+    .second-title {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    .illustration {
+        display: none;
     }
 }
