@@ -21,9 +21,6 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
             rel="stylesheet"
         />
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="index.js"></script>
     </head>
     <body>
         <div class="container align-center">
@@ -112,5 +109,32 @@
                 </button>
             </div>
         </div>
+
+        <script>
+            var sender_name = "";
+            handleMessageClick = function () {
+                document.getElementById("coming-soon").style.display = "none";
+                document.getElementById("leave-a-message").style.display =
+                    "none";
+                document.getElementById("send-a-message").style.display =
+                    "block";
+                document.getElementById("social-icon").style.marginTop =
+                    "-2rem";
+            };
+
+            handleSendClick = function () {
+                mailto_link =
+                    "mailto:kushgabz2687@gmail.com?subject=Portfolio Inquiry&body=" +
+                    document.getElementById("message").value;
+                console.log("mailto_link");
+                window = window.open(mailto_link, "emailWindow");
+            };
+
+            handleMessageFocus = function () {
+                sender_name = document.getElementById("name").value;
+                document.getElementById("message").textContent =
+                    "Hello Kush,\n\nBest Regards,\n" + sender_name;
+            };
+        </script>
     </body>
 </html>
