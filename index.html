@@ -15,24 +15,25 @@
             integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
             crossorigin="anonymous"
         />
-        <!-- GOOGLE ROBOTO & DM SERIF FONT -->
+        <!-- MONTSERRAT FONT -->
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
             rel="stylesheet"
         />
 
-        <link href="index.js" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="index.js"></script>
     </head>
     <body>
         <div class="container align-center">
             <div>
                 <img src="assets/memoji.svg" width="90%" />
             </div>
-            <div style="margin-top: -2rem">
-                <p class="coming-soon">COMING SOON.</p>
+            <div style="margin-top: -2rem" id="coming-soon">
+                <p class="coming-soon">COMING SOON</p>
             </div>
-            <div class="social-icon container-fluid">
+            <div class="container-fluid" id="social-icon">
                 <a
                     href="mailto:kushgabz2687@gmail.com"
                     target="_blank"
@@ -76,8 +77,39 @@
                     <img src="assets/Instagram.svg" />
                 </a>
             </div>
-            <div class="b1">
+            <button
+                class="b1"
+                id="leave-a-message"
+                onclick="handleMessageClick()"
+            >
                 <p class="button-text">Leave a message</p>
+            </button>
+
+            <div class="message-form" id="send-a-message">
+                <div class="col" style="margin: 0.6rem 0">
+                    <input
+                        type="text"
+                        placeholder="your e-mail..."
+                        autocomplete="off"
+                        autocapitalize="words"
+                        class="e-mail"
+                        id="name"
+                    />
+                </div>
+                <div class="col" style="margin: 0.6rem 0">
+                    <textarea
+                        rows="7"
+                        placeholder="Hello Kush,"
+                        id="message"
+                        class="message"
+                        autocomplete="false"
+                        spellcheck="false"
+                        onfocus="handleMessageFocus()"
+                    ></textarea>
+                </div>
+                <button class="col send-btn" onclick="handleSendClick()">
+                    Send
+                </button>
             </div>
         </div>
     </body>
